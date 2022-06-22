@@ -1,29 +1,71 @@
 import * as React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <li>
-        {" "}
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        {" "}
-        <Link to="/aboutus">About Us</Link>
-      </li>
-      <li>
-        {" "}
-        <Link to="/contactus">Contact Us</Link>
-      </li>
-      <li>
-        {" "}
-        <Link to="">Buy Now</Link>
-      </li>
-      {/* <li to="/about">About Us</li>
-      <li to="/">Contact Us</li>
-      <li to="/">Buy Now</li> */}
-    </nav>
+    <>
+      <nav className="navbar">
+        <Logo />
+        <SocialsLinks />
+        <ul className="navBarLinks">
+          <li>
+            {" "}
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/aboutUs">About Us</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/contactUs">Contact Us</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/buyNow">Buy Now</Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
+
+const SocialsLinks = () => {
+  return (
+    <div className="socialLinks">
+      <ul>
+        <li>
+          <Link to="/https://twitter.com/codepath?lang=en">
+            {" "}
+            <TwitterIcon />
+          </Link>
+        </li>
+        <li>
+          <Link to="/https://www.instagram.com/codepathorg/?hl=en">
+            <InstagramIcon />
+          </Link>
+        </li>
+        <li>
+          <Link to="/https://www.facebook.com/codepath.org/">
+            <FacebookIcon />
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+// const AboutUs = () => {
+//   return <h1>HELOOOO</h1>;
+// };
+// const ContactUs = () => {
+//   return <h1>HEeey</h1>;
+// };
+// const BuyNow = () => {
+//   return <h1>Hiii</h1>;
+// };
