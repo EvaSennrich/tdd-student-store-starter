@@ -10,6 +10,7 @@ import NotFound from "../NotFound/NotFound";
 export default function App() {
   return (
     <div className="app">
+      {/*  this helps to render/ call every single component */}
       <BrowserRouter>
         <main>
           {/* YOUR CODE HERE! */}
@@ -17,9 +18,10 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="navbar" element={<Navbar />} />
           </Routes>
 
-          <Navbar />
+          {/* <Navbar /> */}
           <Sidebar />
           <Home />
         </main>
