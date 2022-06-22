@@ -14,6 +14,7 @@ export default function App() {
       <BrowserRouter>
         <main>
           {/* YOUR CODE HERE! */}
+          <Home />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
