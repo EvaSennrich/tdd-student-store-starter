@@ -47,7 +47,22 @@ export default function App() {
   const handleOnToggle = () => {
     //  It should toggle the open/closed state of the Sidebar.
   };
-  const handleAddItemToCart = () => {};
+  const handleAddItemToCart = (productId) => {
+    //      It should accept a single argument - productId
+    //  It should add that product to the shoppingCart if it doesn't exist, and set its quantity to 1.
+    //  If it does exist, it should increase the quantity by 1.
+    //  It should add the price of the product to the total price of the shoppingCart.
+  };
+
+  const handleRemoveItemFromCart = (productId) => {
+    // When called...
+    //  It should accept a single argument - productId
+    //  It should decrease the quantity of the item in the shoppingCart by 1, but only if it already exists.
+    //  If it doesn't exist, the function should do nothing.
+    //  If the new quantity is 0, it should remove the item from the shoppingCart
+  };
+
+  const handleOnCheckoutForm = () => {};
 
   return (
     <div className="app">
