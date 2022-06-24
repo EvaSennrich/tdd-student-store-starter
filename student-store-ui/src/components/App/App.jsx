@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import ProductDetail from "../ProductDetail/ProductDetail";
 import NotFound from "../NotFound/NotFound";
 import { useState } from "react";
@@ -14,13 +14,6 @@ export default function App() {
   const [products, setProducts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState("error");
-  //   shoppingCart - should store state for the active user's shopping cart (items they want to purchase and the quantity of each item).
-  //  Use whatever data type works best here, but make sure the format the shoppingCart as an array before passing it to other components.
-  //  When passed down to other components as a prop, it should formatted as an array of objects.
-  //  Each object in the array should have two fields:
-  //  The itemId field should store the id of the item being purchased.
-  //  The quantity field should store a number representing how many of that item the user is purchasing.
-  //  checkoutForm - the user's information that will be sent to the API when they checkout.
   const [isOpen, setIsOpen] = useState(false);
   const [shoppingCart, setShoppingCart] = useState([]);
 
@@ -44,8 +37,10 @@ export default function App() {
   console.log(products);
 
   const handleOnToggle = () => {
-    //  It should toggle the open/closed state of the Sidebar.
+    setIsOpen(!isOpen);
+    console.log("OPPPPEEEEEN");
   };
+
   const handleAddItemToCart = (productId) => {
     //      It should accept a single argument - productId
     //  It should add that product to the shoppingCart if it doesn't exist, and set its quantity to 1.
@@ -69,19 +64,16 @@ export default function App() {
       <BrowserRouter>
         <main>
           {/* YOUR CODE HERE! */}
+
+          <Sidebar handleOnToggle={handleOnToggle} />
           <Routes>
             <Route path="/" element={<Home products={products} />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
-            {/* <Route path="/aboutUs" element={<AboutUs />} />
-            <Route path="/contactUs" element={<ContactUs />} />
-            <Route path="/buyNow" element={<BuyNow />} /> */}
-            {/* <Route path="navbar" element={<Navbar />} /> */}
           </Routes>
 
-          {/* <Navbar />
-          <Sidebar />
-          <Home /> */}
+          {/* <Navbar /> */}
+          {/* <Home /> */}
         </main>
       </BrowserRouter>
     </div>

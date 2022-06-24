@@ -9,7 +9,7 @@ export default function Home({ products, handleAddItemToCart = () => {}, handleR
   return (
     <div className="home">
       <Navbar />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Hero />
       <ProductGrid products={products} />
     </div>

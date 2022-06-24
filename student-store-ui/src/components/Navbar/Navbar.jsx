@@ -5,11 +5,13 @@ import Logo from "../Logo/Logo";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import Sidebar from "../Sidebar/Sidebar";
 
 export default function Navbar() {
   return (
     <>
       <nav className="navbar">
+        {/* <Sidebar handleOnToggle={handleOnToggle}/> */}
         <Logo />
         <SocialsLinks />
         <ul className="navBarLinks">

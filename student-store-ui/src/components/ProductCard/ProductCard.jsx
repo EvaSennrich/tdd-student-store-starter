@@ -1,5 +1,7 @@
 import React from "react";
 import "./ProductCard.css";
+import StarIcon from "@mui/icons-material/Star";
+import StarHalfIcon from "@mui/icons-material/StarHalf";
 
 const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handleRemoveItemtoCart, showDescription }) => {
   return (
@@ -11,6 +13,13 @@ const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handle
         <div className="product-info">
           <div className="product-main-info">
             <h3 className="product-name">{product.name}</h3>
+            <div className="stars">
+              <StarIcon />
+              <StarIcon />
+              <StarIcon />
+              <StarIcon />
+              <StarHalfIcon />
+            </div>
             <p className="product-price">{"Price: $" + product.price}</p>
           </div>
           <div className="product-actions">
