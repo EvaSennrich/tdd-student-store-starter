@@ -24,25 +24,24 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [shoppingCart, setShoppingCart] = useState([]);
 
-  //Fetching data from API func
-  //  It should make a GET request to the API's /store endpoint with the axios.get method.
-  const fetchData = async () => {
-    try {
-      const response = await axios.get("https://codepath-store-api.herokuapp.com/store");
-      // console.log(response.data);
-      setProducts(response.data);
-      console.log(products);
-    } catch {
-      //  If the request does not complete successfully, or there are no products found in the response, it should create an error message and store it in the error state variable.
-      // setError("no products found");
-      console.log(error);
-    }
-  };
-
   //useEffect calling the fethData func in first reload!
   useEffect(() => {
+    //Fetching data from API func
+    //  It should make a GET request to the API's /store endpoint with the axios.get method.
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://codepath-store-api.herokuapp.com/store");
+        // console.log(response.data);
+        const data = await response?.data?.products;
+        setProducts(data);
+      } catch {
+        //  If the request does not complete successfully, or there are no products found in the response, it should create an error message and store it in the error state variable.
+        setError("no products found");
+      }
+    };
     fetchData();
   }, []);
+  console.log(products);
 
   const handleOnToggle = () => {
     //  It should toggle the open/closed state of the Sidebar.
@@ -70,9 +69,8 @@ export default function App() {
       <BrowserRouter>
         <main>
           {/* YOUR CODE HERE! */}
-          <Home />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home products={products} />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
             {/* <Route path="/aboutUs" element={<AboutUs />} />

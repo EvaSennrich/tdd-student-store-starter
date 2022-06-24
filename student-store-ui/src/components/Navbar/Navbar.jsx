@@ -40,20 +40,20 @@ const SocialsLinks = () => {
     <div className="socialLinks">
       <ul>
         <li>
-          <Link to="/https://twitter.com/codepath?lang=en">
+          <a href="https://twitter.com/codepath?lang=en">
             {" "}
             <TwitterIcon />
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="/https://www.instagram.com/codepathorg/?hl=en">
+          <a href="https://www.instagram.com/codepathorg/?hl=en">
             <InstagramIcon />
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="/https://www.facebook.com/codepath.org/">
+          <a href="https://www.facebook.com/codepath.org/">
             <FacebookIcon />
-          </Link>
+          </a>
         </li>
       </ul>
     </div>

@@ -1,4 +1,41 @@
-/* .hero {
+h1 {
+  font-size: 4rem;
+  color: aliceblue;
+}
+
+.intro-pTag {
+  font-size: 1.2rem;
+  color: aliceblue;
+}
+
+.hero {
   display: flex;
-  justify-content: flex-end;
-} */
+  justify-content: flex-start;
+  /* margin-top: -80px; */
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  /* margin: 20rem 20rem; */
+  background-color: rgb(9, 209, 142);
+}
+
+.intro {
+  margin-left: 1rem;
+}
+
+.media {
+  display: flex;
+  margin: 9rem 9rem;
+}
+
+.icon {
+  height: 6rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .content {
+    margin: 0 20rem;
+  }
+}

@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-evenly;
   /* margin-left: 70px; */
+  margin: 0px auto;
+  z-index: 1;
 }
 
 ul {
