@@ -65,7 +65,7 @@ export default function App() {
         <main>
           {/* YOUR CODE HERE! */}
 
-          <Sidebar handleOnToggle={handleOnToggle} />
+          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} />
           <Routes>
             <Route path="/" element={<Home products={products} />} />
             <Route path="/products/:productId" element={<ProductDetail />} />

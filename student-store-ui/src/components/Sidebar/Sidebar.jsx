@@ -8,6 +8,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 // import Link from "@mui/material";
 
 export default function Sidebar({ isOpen, shoppingCart, products, checkoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm, handleOnToggle }) {
+  // const handleOnToggle = () => {
+  //   setIsOpen(!isOpen);
+  //   console.log("OPPPPEEEEEN");
+  // };
   return (
     <section className={isOpen ? "sidebar open" : "sidebar close"}>
       <div className="buttonDiv">
