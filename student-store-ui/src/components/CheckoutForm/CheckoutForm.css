@@ -1,0 +1,35 @@
+.checkout-form {
+  border-top: 2px solid white;
+  /* margin-top: 3rem; */
+  color: white;
+}
+
+.inputs-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-input,
+.email-input {
+  /* display: flex;
+  justify-content: center; */
+  border-radius: 14px;
+  width: 48vh;
+  height: 4vh;
+  outline: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.name-form,
+.email-form {
+  margin-top: 0.5rem;
+  margin-right: 18rem;
+  font-weight: normal;
+}
+
+.consent {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}

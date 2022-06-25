@@ -5,6 +5,8 @@ import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import MenuIcon from "@mui/icons-material/Menu";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AddCardIcon from "@mui/icons-material/AddCard";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 export default function Sidebar({ isOpen, shoppingCart, products, checkoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm, handleOnToggle }) {
   // const handleOnToggle = () => {
@@ -33,6 +35,7 @@ export default function Sidebar({ isOpen, shoppingCart, products, checkoutForm, 
           </div>
         </div>
       </div>
+      <ShoppingCart isOpen={isOpen} products={products} />
       {/* <p>//conditional code</p> */}
     </section>
   );

@@ -1,0 +1,69 @@
+/* hide table-cart div when sideBar is open */
+.shopping-cart.close {
+  display: none;
+}
+
+.shopping-cart .cart-table.open {
+  visibility: visible;
+}
+
+.shopping-cart .cart-table {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 20vw;
+  border-top: 2px solid white;
+  margin: 20px 10px 40px 10px;
+  font-size: 16px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.shopping-cart .cart-table .header-row {
+  display: flex;
+  border: 1.5px solid white;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+}
+.product-row {
+  display: flex;
+  border: solid 1px white;
+  border-radius: 4px;
+  width: 100%;
+  background-color: aliceblue;
+  color: black;
+  margin-top: -7px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.receipt {
+  /* display: flex; */
+  border: solid 1px white;
+  border-radius: 4px;
+  width: 100%;
+  background-color: aliceblue;
+  color: black;
+  margin-top: 12px;
+}
+
+.receipt-subtotal,
+.receipt-taxes,
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+  .shopping-cart .cart-table {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 40vw;
+    border-top: 3px solid white;
+    margin: 20px 10px 40px 10px;
+  }
+}

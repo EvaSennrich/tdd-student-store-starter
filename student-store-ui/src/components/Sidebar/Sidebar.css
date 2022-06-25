@@ -51,7 +51,7 @@
 }
 
 .sidebar .toggle-button.open {
-  width: 350px;
+  width: 380px;
   transform: rotateY(180deg);
 }
 
@@ -65,8 +65,9 @@
   padding-left: 0.5rem;
 }
 
+/* hide icons when sideBar is open */
 .shopping-cart .cart-icons.open {
-  visibility: hidden;
+  display: none;
 }
 
 span {
