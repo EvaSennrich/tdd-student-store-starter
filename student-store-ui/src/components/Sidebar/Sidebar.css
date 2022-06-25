@@ -26,7 +26,7 @@
   background-color: #2c4147;
 }
 
-sidebar .wrapper {
+.sidebar .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +47,7 @@ sidebar .wrapper {
   background: transparent;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .sidebar .toggle-button.open {
@@ -55,12 +56,17 @@ sidebar .wrapper {
 }
 
 .shopping-cart .cart-icons {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
   width: 100%;
   padding-left: 0.5rem;
+}
+
+.shopping-cart .cart-icons.open {
+  visibility: hidden;
 }
 
 span {

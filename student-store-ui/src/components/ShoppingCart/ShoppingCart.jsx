@@ -6,7 +6,7 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
       <h4>
         Shopping Cart <ShoppingCartIcon />{" "}
       </h4>
-      <p>//conditional code</p>
+      {/* <p>//conditional code</p> */}
     </div>
   );
 };

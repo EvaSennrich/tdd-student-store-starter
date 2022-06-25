@@ -6,9 +6,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AddCardIcon from "@mui/icons-material/AddCard";
 
-// import { Checkbox } from "@mui/material";
-// import Link from "@mui/material";
-
 export default function Sidebar({ isOpen, shoppingCart, products, checkoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm, handleOnToggle }) {
   // const handleOnToggle = () => {
   //   setIsOpen(!isOpen);
@@ -21,7 +18,7 @@ export default function Sidebar({ isOpen, shoppingCart, products, checkoutForm, 
           <MenuIcon />
         </button>
         <div className="shopping-cart">
-          <div className="cart-icons">
+          <div className={isOpen ? "shopping-cart cart-icons open" : "shopping-cart cart-icons"}>
             <span>
               <AddShoppingCartIcon style={{ color: "white", fontSize: "2rem" }} />
             </span>
