@@ -9,12 +9,15 @@ h1 {
 }
 
 .hero {
+  /* position: absolute;
+  right: 0;
+  top: 80px; */
   display: flex;
-  justify-content: flex-start;
-  /* margin-top: -80px; */
+  justify-content: center;
 }
 
 .content {
+  margin: 0;
   display: flex;
   justify-content: center;
   /* margin: 20rem 20rem; */
@@ -34,8 +37,9 @@ h1 {
   height: 6rem;
 }
 
-@media screen and (min-width: 1000px) {
-  .content {
-    margin: 0 20rem;
+@media screen and (min-width: 800px) {
+  .hero {
+    margin-left: 7rem;
+    margin-right: 1.5rem;
   }
 }

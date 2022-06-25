@@ -1,0 +1,5 @@
+.product-detail-cont {
+  display: flex;
+  flex-direction: column;
+  margin-left: 32rem;
+}

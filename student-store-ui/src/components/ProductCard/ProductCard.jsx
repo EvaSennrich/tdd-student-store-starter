@@ -2,14 +2,15 @@ import React from "react";
 import "./ProductCard.css";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
-import { border } from "@mui/system";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handleRemoveItemtoCart, showDescription }) => {
   return (
-    <div className="product-grid">
+    //Here I'm wrapping my whole product card container to be "clickable" and send/ route the user to whatever product.id was clicked on. -->  The logic is in the ProductDetail component file.
+    <Link to={"/products/" + product.id}>
       <div className="product-card">
         <div className="product-image-cont">
-          <img className="product-img" src={product.image} alt={product.name + "image"} />
+          <img className="product-img" src={product.image} alt={product.name + "image"} onClick={showDescription} />
         </div>
         <div className="product-info">
           <div className="product-main-info">
@@ -31,7 +32,7 @@ const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handle
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

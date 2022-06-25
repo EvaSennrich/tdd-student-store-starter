@@ -11,7 +11,6 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar">
-        {/* <Sidebar handleOnToggle={handleOnToggle}/> */}
         <Logo />
         <SocialsLinks />
         <ul className="navBarLinks">
@@ -61,13 +60,3 @@ const SocialsLinks = () => {
     </div>
   );
 };
-
-// const AboutUs = () => {
-//   return <h1>HELOOOO</h1>;
-// };
-// const ContactUs = () => {
-//   return <h1>HEeey</h1>;
-// };
-// const BuyNow = () => {
-//   return <h1>Hiii</h1>;
-// };

@@ -8,7 +8,7 @@ import ProductGrid from "../ProductGrid/ProductGrid";
 export default function Home({ products, handleAddItemToCart = () => {}, handleRemoveItemToCart = () => {} }) {
   return (
     <div className="home">
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Sidebar /> */}
       <Hero />
       <ProductGrid products={products} />

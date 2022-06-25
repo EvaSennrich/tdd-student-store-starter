@@ -1,0 +1,9 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* margin: 3rem 1.5rem; */
+  margin-top: 2rem;
+  margin-left: 13rem;
+  margin-right: 7rem;
+}
