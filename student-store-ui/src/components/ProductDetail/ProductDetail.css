@@ -1,5 +1,21 @@
 .product-detail-cont {
   display: flex;
   flex-direction: column;
+  justify-items: center;
   margin-left: 32rem;
+}
+
+.detail-image-cont {
+  width: 10rem;
+  height: 10rem;
+  align-items: center;
+}
+
+.detail-image {
+  width: 30rem;
+  height: 30rem;
+}
+
+.product-description {
+  margin-top: 20rem;
 }

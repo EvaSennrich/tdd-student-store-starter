@@ -9,13 +9,16 @@ import NotFound from "../NotFound/NotFound";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { ListItem } from "@mui/material";
 
 export default function App() {
   const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState("error");
   const [isOpen, setIsOpen] = useState(false);
   const [shoppingCart, setShoppingCart] = useState([]);
+  const [inputText, setInputText] = useState("");
 
   //useEffect calling the fethData func in first reload!
   useEffect(() => {
@@ -27,9 +30,10 @@ export default function App() {
         // console.log(response.data);
         const data = await response?.data?.products;
         setProducts(data);
+        setAllProducts(data);
       } catch {
         //  If the request does not complete successfully, or there are no products found in the response, it should create an error message and store it in the error state variable.
-        setError("no products found");
+        setError(error);
       }
     };
     fetchProducts();
@@ -38,7 +42,7 @@ export default function App() {
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen);
-    console.log("OPPPPEEEEEN");
+    console.log("OPPPPEENEED");
   };
 
   const handleAddItemToCart = (productId) => {
@@ -58,6 +62,20 @@ export default function App() {
 
   const handleOnCheckoutForm = () => {};
 
+  const searchForItem = () => {
+    products.filter((item) => {
+      setInputText(item);
+      // this.setState({ currentTemp: e.target.value });
+      if ((item.inputText = item.name)) {
+        return console.log("ITEM=", item.inputText);
+      } else {
+        console.log("BIIG FAT ERROR");
+        console.log("-->>", products[7].category);
+      }
+      // console.log("-->>", products.item);
+    });
+  };
+
   return (
     <div className="app">
       {/*  this helps to render/ call every single component */}
@@ -67,7 +85,7 @@ export default function App() {
           <Navbar />
           <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} products={products} />
           <Routes>
-            <Route path="/" element={<Home products={products} />} />
+            <Route path="/" element={<Home products={products} allProducts={allProducts} searchForItem={searchForItem} setProducts={setProducts} />} />
             <Route path="/products/:productId" element={<ProductDetail product={products} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
