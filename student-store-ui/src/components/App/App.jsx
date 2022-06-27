@@ -10,6 +10,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { ListItem } from "@mui/material";
+import AboutUs from "../AboutUs/AboutUs";
+import ContactUs from "../ContactUs/ContactUs";
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -88,10 +90,9 @@ export default function App() {
             <Route path="/" element={<Home products={products} allProducts={allProducts} searchForItem={searchForItem} setProducts={setProducts} />} />
             <Route path="/products/:productId" element={<ProductDetail product={products} />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/contactus" element={<ContactUs />} />
           </Routes>
-
-          {/* <Navbar /> */}
-          {/* <Home /> */}
         </main>
       </BrowserRouter>
     </div>

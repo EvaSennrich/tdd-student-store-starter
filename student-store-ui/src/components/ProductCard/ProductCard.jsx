@@ -25,11 +25,14 @@ const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handle
             <StarHalfIcon style={{ color: "#ffdf00" }} />
           </div>
           <p className="product-price">{"Price: $" + product.price}</p>
+          <div className="quantityNum">{"Quantity: " + product.id}</div>
         </div>
-        <div className="product-actions">
-          <div className="product-btns">
-            <button>-</button>
-            <button>+</button>
+        <div className="product-btns">
+          <div className="remove-btn">
+            <button className="removeBtn">-</button>
+          </div>
+          <div className="add-btn">
+            <button className="addBtn">+</button>
           </div>
         </div>
       </div>

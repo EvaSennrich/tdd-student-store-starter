@@ -6,6 +6,9 @@ import Hero from "../Hero/Hero";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import SubNavBar from "../SubNavBar/SubNavBar";
 import { useState } from "react";
+import AboutUs from "../AboutUs/AboutUs";
+import ContactUs from "../ContactUs/ContactUs";
+import Footer from "../Footer/Footer";
 
 export default function Home({ products, handleAddItemToCart, handleRemoveItemToCart, searchForItem, setProducts, allProducts }) {
   return (
@@ -13,8 +16,11 @@ export default function Home({ products, handleAddItemToCart, handleRemoveItemTo
       {/* <Navbar /> */}
       {/* <Sidebar /> */}
       <Hero />
-      <SubNavBar searchForItem={searchForItem} products={allProducts} setProducts={setProducts} />
+      <SubNavBar searchForItem={searchForItem} products={allProducts} setProducts={setProducts} allProducts={allProducts} />
       <ProductGrid products={products} />
+      <AboutUs />
+      <ContactUs />
+      <Footer />
     </div>
   );
 }

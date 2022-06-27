@@ -19,6 +19,14 @@
   outline: none;
   cursor: pointer;
   margin-left: 1rem;
+  height: 2rem;
+  width: 21rem;
+  /* height: 40px; */
+  padding: 0 15px;
+  /* border-radius: 8px;
+  border: solid 1px #e4e4e4;
+  flex: 1;
+  font-size: 16px; */
 }
 
 .name-form,
