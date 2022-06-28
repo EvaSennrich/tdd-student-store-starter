@@ -71,11 +71,11 @@ The following specifications were met on the Express backend and the React front
     - [ ] When the request completes successfully, it should store the `products` returned by the response in state.
     - [ ] If the request does not complete successfully, or there are no `products` found in the response,
             it should create an error message and store it in the `error` state variable.
-  - [ ] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
-    - [ ] Define as many as are needed.
-    - [ ] At minimum, **create these five handlers**:
-      - [ ] The **`handleOnToggle`** function. When called...
-        - [ ] It should toggle the open/closed state of the `Sidebar`.
+  - [X] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
+    - [X] Define as many as are needed.
+    - [X] At minimum, **create these five handlers**:
+      - [X] The **`handleOnToggle`** function. When called...
+        - [X] It should toggle the open/closed state of the `Sidebar`.
       - [ ] The **`handleAddItemToCart`** function. When called...
         - [ ] It should accept a single argument - `productId`
         - [ ] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
@@ -207,8 +207,8 @@ The following specifications were met on the Express backend and the React front
 
 **ShoppingCart.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `div` element with the `className` of `shopping-cart`
-  - [ ] Should accept **at least** the following props (and probably a few more):
+  - [X] Should render JSX that is wrapped by a `div` element with the `className` of `shopping-cart`
+  - [X] Should accept **at least** the following props (and probably a few more):
     - `isOpen` - boolean representing the open/closed state of the Sidebar
     - `products` - the array of products fetched from the API
     - `shoppingCart` - the active user's cart formatted as an array of objects with `itemId` and `quantity` keys
@@ -221,14 +221,14 @@ The following specifications were met on the Express backend and the React front
 
 **CheckoutForm.jsx**
 
-  - [ ] Should render JSX that is wrapped by a `div` element with the `className` of `checkout-form`
-  - [ ] Should accept **at least** the following props:
+  - [X] Should render JSX that is wrapped by a `div` element with the `className` of `checkout-form`
+  - [X] Should accept **at least** the following props:
     - `isOpen` - boolean
     - `shoppingCart` - the active user's cart formatted as an array of objects with `itemId` and `quantity` keys
     - `checkoutForm` - the form state for the `CheckoutForm` component
     - `handleOnCheckoutFormChange` - handler function to update the `checkoutForm`
     - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
-  - [ ] Should render two `input` elements, each with the `className` of `checkout-form-input`
+  - [X] Should render two `input` elements, each with the `className` of `checkout-form-input`
     - [ ] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
       - [ ] The first input should have:
         - [ ] the `type` prop set to `email`
@@ -311,4 +311,4 @@ I would have liked to have done more features to present before the demo day. I 
 
 ### Shout out
 
-I'd like to give a shoutout to my instructor and TA's who always make the learning enjoyable, and also big shoutout to Joram who helped me clarify the use of axios!
+I'd like to give a shout out to my instructor and TA's who always make the learning enjoyable, and also big shout out to Joram who helped me clarify the use of axios!
