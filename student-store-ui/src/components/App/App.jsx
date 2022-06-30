@@ -20,7 +20,6 @@ export default function App() {
   const [error, setError] = useState("error");
   const [isOpen, setIsOpen] = useState(false);
   const [shoppingCart, setShoppingCart] = useState([]);
-  const [inputText, setInputText] = useState("");
 
   //useEffect calling the fethData func in first reload!
   useEffect(() => {
@@ -64,30 +63,15 @@ export default function App() {
 
   const handleOnCheckoutForm = () => {};
 
-  const searchForItem = () => {
-    products.filter((item) => {
-      setInputText(item);
-      // this.setState({ currentTemp: e.target.value });
-      if ((item.inputText = item.name)) {
-        return console.log("ITEM=", item.inputText);
-      } else {
-        console.log("BIIG FAT ERROR");
-        console.log("-->>", products[7].category);
-      }
-      // console.log("-->>", products.item);
-    });
-  };
-
   return (
     <div className="app">
       {/*  this helps to render/ call every single component */}
       <BrowserRouter>
         <main>
-          {/* YOUR CODE HERE! */}
           <Navbar />
           <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} products={products} />
           <Routes>
-            <Route path="/" element={<Home products={products} allProducts={allProducts} searchForItem={searchForItem} setProducts={setProducts} />} />
+            <Route path="/" element={<Home products={products} allProducts={allProducts} setProducts={setProducts} />} />
             <Route path="/products/:productId" element={<ProductDetail product={products} />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/aboutus" element={<AboutUs />} />

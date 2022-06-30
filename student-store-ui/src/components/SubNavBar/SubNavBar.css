@@ -15,29 +15,6 @@
   margin: 20px 0;
 }
 
-.searchBar-div {
-  margin-left: 14rem;
-}
-
-.searchBar {
-  height: 2.5rem;
-  width: 20rem;
-  /* height: 40px; */
-  padding: 0 15px;
-  border-radius: 8px;
-  border: solid 1px #e4e4e4;
-  flex: 1;
-  font-size: 16px;
-}
-
-.searchIcon {
-  margin-bottom: -8.5px;
-  margin-left: 0.5rem;
-  /* background-color: rgb(9, 209, 142);
-  color: white; */
-  /* padding: 2rem; */
-}
-
 .row-content2 {
   display: flex;
   justify-content: center;

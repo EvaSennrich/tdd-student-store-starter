@@ -9,15 +9,32 @@ import { useState } from "react";
 import AboutUs from "../AboutUs/AboutUs";
 import ContactUs from "../ContactUs/ContactUs";
 import Footer from "../Footer/Footer";
+import SearchIcon from "@mui/icons-material/Search";
 
-export default function Home({ products, handleAddItemToCart, handleRemoveItemToCart, searchForItem, setProducts, allProducts }) {
+export default function Home({ products, handleAddItemToCart, handleRemoveItemToCart, setProducts, allProducts }) {
+  const [searchItem, setSearchItem] = useState("");
+
+  //Func search for item in searchBar input tag
+  const searchForItem = (e) => {
+    console.log("----->", e);
+    setSearchItem(e.target.value);
+  };
+
+  // filtering products array, lower casing them and checking if stateVar "searchItem" inputted by user is included in the array
+  let searchProducts = products.filter((e) => {
+    return e.name.toLowerCase().includes(searchItem.toLowerCase());
+  });
+
   return (
     <div className="home">
-      {/* <Navbar /> */}
-      {/* <Sidebar /> */}
       <Hero />
-      <SubNavBar searchForItem={searchForItem} products={allProducts} setProducts={setProducts} allProducts={allProducts} />
-      <ProductGrid products={products} />
+      <div className="searchBar-div">
+        <input type="text" className="searchBar" value={searchItem} placeholder="search" onChange={searchForItem} />
+        {/* onChange={(e) => setInputText(e.target.value)} */}
+        <SearchIcon className="searchIcon" />
+      </div>
+      <SubNavBar products={allProducts} setProducts={setProducts} allProducts={allProducts} />
+      <ProductGrid products={searchProducts} />
       <AboutUs />
       <ContactUs />
       <Footer />
