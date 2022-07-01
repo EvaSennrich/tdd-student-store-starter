@@ -16,21 +16,22 @@ router.get("/", (req, res, next) => {
 router.get("/:productId", (req, res, next) => {
   const productID = req.params.productId;
   const product = store.productsByID(productID);
+  // When either the shoppingCart or user fields are missing. throw a 400 error.
+  if (!shoppingCart || !user) {
+    throw new BadRequestError();
+  }
   res.status(200).json({ product: product });
 });
 
 //allow POST requests to the /store endpoint and creates purchase orders for users and save them to the db.json file
 router.post("/", (req, res, next) => {
   try {
-    const purchases = req.body;
-
-    const shoppingCart = purchases.shoppingCart;
-    const user = purchases.user;
+    const shoppingCart = req.body.shoppingCart;
+    const user = req.body.user;
 
     const purchaseOrder = store.createPurchaseOrder(user, shoppingCart);
 
     res.status(201).json({ purchase: purchaseOrder });
-    console.log("--->", error);
   } catch (error) {
     next(error) || next(BadRequestError());
   }

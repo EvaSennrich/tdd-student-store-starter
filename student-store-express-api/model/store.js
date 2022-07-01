@@ -32,8 +32,8 @@ class Store {
     shoppingCart.forEach((el) => {
       let product = this.productsByID(el.itemId);
       let unitPrice = product.price;
-      let elPrice = unitPrice * el.quantity;
-      return (subTotal += elPrice); //DOUBLE CHECK THIS LINE
+      let itemPrice = unitPrice * el.quantity;
+      return (subTotal += itemPrice); //DOUBLE CHECK THIS LINE
     });
   }
 
@@ -58,6 +58,12 @@ class Store {
       total: this.totalOrder(shoppingCart) * 2,
       createAt: this.issueOrder(),
     };
+
+    // If either the quantity or itemId field is missing for any of the items in the shoppingCart, a 400 error should be thrown.
+    if (!quantity || !itemId) {
+      throw new BadRequestError();
+    }
+
     storage.get("purchases").push(userOrder).write();
     return userOrder;
   }

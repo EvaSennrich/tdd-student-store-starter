@@ -19,10 +19,21 @@ app.get("/store", (req, res) => {
   res.status(200).json({ ping: "pong" });
 });
 
+// if not other error happen above this and none of the other app.get success throw an new NotFoundError
 app.use((req, res, next) => {
   // const e = new NotFoundError();
   // return next(new Error());
-  return next(new NotFoundError());
+  return next(new NotFoundError("New Error NO HTML"));
+});
+
+//and if not throw a generic error
+app.use((error, req, res, next) => {
+  const status = error.status || 500;
+  const message = error.message; // || "Something wen't wrong in the application";
+
+  return res.status(status).json({
+    error: { message, status },
+  });
 });
 
 module.exports = app;

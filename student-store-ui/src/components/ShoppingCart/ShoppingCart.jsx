@@ -5,9 +5,9 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal }) => {
   //global variables for the user receipt
-  let subototalPrice = Math.round((subtotal + Number.EPSILON) * 100) / 100;
-  let taxes = Math.round((subototalPrice * 0.0875 + Number.EPSILON) * 100) / 100;
-  let totalPrice = Math.round((subototalPrice + taxes + Number.EPSILON) * 100) / 100;
+  let subtotalPrice = Math.round((subtotal + Number.EPSILON) * 100) / 100;
+  let taxes = Math.round((subtotalPrice * 0.0875 + Number.EPSILON) * 100) / 100;
+  let totalPrice = Math.round((subtotalPrice + taxes + Number.EPSILON) * 100) / 100;
   console.log("CART", shoppingCart);
   return (
     <div className={isOpen ? "shopping-cart cart-table" : "shopping-cart close"}>
@@ -39,7 +39,7 @@ const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal }) => {
             <span className="subtotal">Subtotal</span>
             <span></span>
             <span></span>
-            <span>{"$" + subototalPrice}</span>
+            <span>{"$" + subtotalPrice}</span>
           </div>
           <div className="receipt-taxes">
             <span className="subtotal">Taxes</span>
