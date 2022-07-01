@@ -265,15 +265,15 @@ The following specifications were met on the Express backend and the React front
   - [X] It should respond to `GET` requests to `/store` with an array of all products in the store in this format: `{ "products": products }`
   - [X] It should respond to `GET` requests to `/store/:productId` with a single product based on the product's id using this JSON format: `{ "product": product }`
   - [X] It should allow `POST` requests to the `/store` endpoint:
-    - [ ] The endpoint should create purchase orders for users and save them to the `db.json` file
-    - [ ] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
-      - [ ] The `shoppingCart` field should contain the user's order.
-        - [ ] This should be an array of objects.
-        - [ ] Each object in the array should have two fields:
+    - [X] The endpoint should create purchase orders for users and save them to the `db.json` file
+    - [X] The endpoint should accept a request body that contains `shoppingCart` and `user` fields.
+      - [X] The `shoppingCart` field should contain the user's order.
+        - [X] This should be an array of objects.
+        - [X] Each object in the array should have two fields:
           <!-- - [ ] The `item` field should store an object of the item being purchased -->
-          - [ ] The `itemId` field should store the `id` of the item being purchased
-          - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
-      - [ ] The `user` field should contain the name and email of the person placing the order.
+          - [X] The `itemId` field should store the `id` of the item being purchased
+          - [X] The `quantity` field should store a number representing how many of that item the user is purchasing.
+      - [X] The `user` field should contain the name and email of the person placing the order.
       - [ ] When either the `shoppingCart` or `user` fields are missing, it should throw a `400` error.
       - [ ] If there are duplicate items in the `shoppingCart`, it should throw a `400` error.
       - [ ] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
@@ -284,7 +284,7 @@ The following specifications were met on the Express backend and the React front
           - [ ] `email` - the email of the user making the purchase
           - [ ] `order` - the `shoppingCart` value sent in the `POST` request
           - [ ] `total` - the calculated total of the order
-          - [ ] `createdAt` - a string representation of the date and time when the order was placed
+          - [X] `createdAt` - a string representation of the date and time when the order was placed
         - **optional**:
           - [ ] `receipt` - text describing the order (what might go on a receipt)
       - [ ] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
@@ -295,15 +295,17 @@ The following specifications were met on the Express backend and the React front
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Some features covered on the previous labs helped me understand the ones covered in this project. Likewise the examples and lessons given by the instructir and TA's were really helpful.For example, they provided us with whiteboarding examples and live coding examples that made me understood react hooks in a better way.
+Yes, some features covered on the previous labs helped me understand the ones covered in this project. Likewise the examples and lessons given by the instructir and TA's were really helpful.For example, they provided us with whiteboarding examples and live coding examples that made me understood react hooks in a better way.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-I would have completed more stretch and core features and added more features as well such as creating a log in and sign up page. I would have improved the design of the page and made the links of the footer work to take the user to its respective page. 
+I would have completed more stretch features and added more features as well such as creating a log in and sign up page. I would have improved the design of the page and made the links of the footer clickable in order to take the user to its respective page. 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
 I would have liked to have done more features to present before the demo day. I feel I could have done more if I would have had more time. I noticed that three of my peers had more feature done than me and for the next time I would like to be one among them.
+
+Update-Part II: I feel I did a good job for this part II of the project. Even though two of my peers were able to present the final project - which was awesome!- I feel proud of how far I have taken this project!
 
 ### Open-source libraries used
 
@@ -311,4 +313,4 @@ I would have liked to have done more features to present before the demo day. I 
 
 ### Shout out
 
-I'd like to give a shout out to my instructor and TA's who always make the learning enjoyable, and also big shout out to Joram who helped me clarify the use of axios!
+I'd like to give a shout out to my instructor and TA's who always make the learning enjoyable, and also big shout out to Joram who helped me clarify the use of axios!. To nick my TA for explaining me more in deep the importance of routes and/or endpoints!
