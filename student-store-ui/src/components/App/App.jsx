@@ -20,11 +20,7 @@ export default function App() {
   const [error, setError] = useState("error");
   const [isOpen, setIsOpen] = useState(false);
   const [shoppingCart, setShoppingCart] = useState([]);
-  const [subtotal, setSubtotal] = useState("");
-  // const [productID, setProductID] = useState("");
-  // const [quantity, setQuantity] = useState("");
-
-  // setQuantity(shoppingCart.find((item) => item.itemId === productID.id) ? shoppingCart.find((item) => item.itemId === productID.id).quantity : null);
+  const [subtotal, setSubtotal] = useState(0);
 
   //Fetching data products func
   useEffect(() => {
@@ -65,16 +61,17 @@ export default function App() {
         shoppingCart[i].quantity += 1;
         setShoppingCart([...shoppingCart]);
         let price = products.find((prod) => prod.id === pId).price + subtotal;
-        setSubtotal(price);
+        setSubtotal(price).toFixed(2);
       }
     }
     productAdded = {
       itemId: pId,
       quantity: 1,
     };
+
     setShoppingCart([productAdded, ...shoppingCart]);
     let price = products.find((prod) => prod.id === pId).price + subtotal;
-    setSubtotal(price);
+    setSubtotal(price).toFixed(2);
     console.log("pId", pId);
     console.log("PRODUCT ADDED", productAdded);
     console.log("CART", shoppingCart);
@@ -87,13 +84,13 @@ export default function App() {
         if (shoppingCart[i].quantity != 1) {
           shoppingCart[i].quantity -= 1;
           setShoppingCart([...shoppingCart]);
-          let price = products.find((prod) => prod.id === pId).price - subtotal;
-          setSubtotal(price);
+          let price = subtotal - products.find((prod) => prod.id === pId).price;
+          setSubtotal(price).toFixed(2);
         } else {
           shoppingCart.splice(i, 1);
           setShoppingCart([...shoppingCart]);
-          let price = products.find((prod) => prod.id === pId).price - subtotal;
-          setSubtotal(price);
+          let price = subtotal - products.find((prod) => prod.id === pId).price;
+          setSubtotal(price).toFixed(2);
           console.log("deleted");
           console.log(shoppingCart);
         }

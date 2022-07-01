@@ -17,9 +17,9 @@ router.get("/:productId", (req, res, next) => {
   const productID = req.params.productId;
   const product = store.productsByID(productID);
   // When either the shoppingCart or user fields are missing. throw a 400 error.
-  if (!shoppingCart || !user) {
-    throw new BadRequestError();
-  }
+  // if (!shoppingCart || !user) {
+  //   throw new BadRequestError();
+  // }
   res.status(200).json({ product: product });
 });
 

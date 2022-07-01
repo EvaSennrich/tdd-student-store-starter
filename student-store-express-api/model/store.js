@@ -60,9 +60,9 @@ class Store {
     };
 
     // If either the quantity or itemId field is missing for any of the items in the shoppingCart, a 400 error should be thrown.
-    if (!quantity || !itemId) {
-      throw new BadRequestError();
-    }
+    // if (!quantity || !itemId) {
+    //   throw new BadRequestError();
+    // }
 
     storage.get("purchases").push(userOrder).write();
     return userOrder;

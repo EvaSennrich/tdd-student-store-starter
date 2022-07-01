@@ -8,7 +8,9 @@ const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal }) => {
   let subtotalPrice = Math.round((subtotal + Number.EPSILON) * 100) / 100;
   let taxes = Math.round((subtotalPrice * 0.0875 + Number.EPSILON) * 100) / 100;
   let totalPrice = Math.round((subtotalPrice + taxes + Number.EPSILON) * 100) / 100;
+
   console.log("CART", shoppingCart);
+
   return (
     <div className={isOpen ? "shopping-cart cart-table" : "shopping-cart close"}>
       <div className="cart-table">
