@@ -41,3 +41,14 @@
   justify-content: space-around;
   margin-top: 1rem;
 }
+
+.checkout-btn {
+  margin-top: 10px;
+  margin-left: 3rem;
+  padding: 10px 116px;
+  font-size: 18px;
+  cursor: pointer;
+  background: transparent;
+  border: solid 1px white;
+  color: #fff;
+}

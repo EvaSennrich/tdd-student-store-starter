@@ -20,6 +20,10 @@ const CheckoutForm = () => {
         <input className="checkBox" type={"checkbox"}></input>
         <label>I agree to the terms and conditions</label>
       </div>
+      <div className="checkout-btn-div">
+        {" "}
+        <button className="checkout-btn">Checkout</button>
+      </div>
     </div>
   );
 };
