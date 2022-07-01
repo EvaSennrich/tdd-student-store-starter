@@ -7,32 +7,65 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const ProductGrid = ({ products }) => {
-  const [shoppingCart, setShoppingCart] = useState({});
-  const [productID, setProductID] = useState("");
-  //=============================================================================
-  //pid = productId
-  let cart = {};
-  const handleAddItemToCart = (pid) => {
-    if (cart.hasOwnProperty(pid)) {
-      cart[pid]++;
-    } else {
-      cart[pid] = 1;
-    }
-    setShoppingCart([cart, ...shoppingCart]);
-    console.log(shoppingCart);
-  };
+const ProductGrid = ({ products, handleAddItemToCart, handleRemoveItemFromCart, quantity }) => {
+  // const [shoppingCart, setShoppingCart] = useState([]);
+  // const [subtotal, setSubtotal] = useState("");
+  // const [productID, setProductID] = useState("");
+  // //===========================================================================
 
-  const handleRemoveItemFromCart = (pid) => {
-    shoppingCart.map((item, index) => {
-      let newShopppingCart = [];
+  // let cart = {}; //pId = productId
 
-      item.id === pid ? (newShopppingCart[index].quantity -= 1) : null;
-      setShoppingCart([...shoppingCart]);
-      console.log("ERROR");
-    });
-    console.log(pid);
-  };
+  // const handleAddItemToCart = (pId) => {
+  //   // if (cart.hasOwnProperty(pId)) {
+  //   //   cart[pId]++;
+  //   // } else {
+  //   //   cart[pId] = 1;
+  //   // }
+  //   // setShoppingCart([...shoppingCart]);
+  //   // console.log(shoppingCart);
+
+  //   let productAdded;
+  //   for (var i = 0; i < shoppingCart.length; i++) {
+  //     if (shoppingCart[i].itemId === pId) {
+  //       shoppingCart[i].quantity += 1;
+  //       setShoppingCart([...shoppingCart]);
+  //       let price = products.find((prod) => prod.id === pId).price + subtotal;
+  //       setSubtotal(price);
+  //     }
+  //   }
+  //   productAdded = {
+  //     productId: pId,
+  //     quantity: 1,
+  //   };
+  //   setShoppingCart([productAdded, ...shoppingCart]);
+  //   let price = products.find((prod) => prod.id === pId).price + subtotal;
+  //   setSubtotal(price);
+  //   console.log("pId", pId);
+  //   console.log("PRODUCT ADDED", productAdded);
+  //   console.log("CART", shoppingCart);
+  //   console.log("SUBTOT", subtotal);
+  // };
+
+  // const handleRemoveItemFromCart = (pId) => {
+  //   for (var i = 0; i < shoppingCart.length; i++) {
+  //     if (shoppingCart[i].itemId === pId) {
+  //       if (shoppingCart[i].quantity != 1) {
+  //         shoppingCart[i].quantity -= 1;
+  //         setShoppingCart([...shoppingCart]);
+  //         let price = products.find((prod) => prod.id === pId).price - subtotal;
+  //         setSubtotal(price);
+  //       } else {
+  //         shoppingCart.splice(i, 1);
+  //         setShoppingCart([...shoppingCart]);
+  //         let price = products.find((prod) => prod.id === pId).price - subtotal;
+  //         setSubtotal(price);
+  //         console.log("deleted");
+  //         console.log(shoppingCart);
+  //         // console.log("PRODUCT ADDED", productAdded);
+  //       }
+  //     }
+  //   }
+  // };
 
   const showDescription = () => {
     <Link to={"/products/" + products[0].id} state={{ product: products[0] }}>
@@ -48,9 +81,9 @@ const ProductGrid = ({ products }) => {
           <ProductCard
             showDescription={showDescription}
             product={product}
-            // quantity={quantity}
             handleAddItemToCart={handleAddItemToCart}
             handleRemoveItemFromCart={handleRemoveItemFromCart}
+            quantity={quantity}
           />
         </div>
       ))}

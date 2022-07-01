@@ -11,7 +11,7 @@ import ContactUs from "../ContactUs/ContactUs";
 import Footer from "../Footer/Footer";
 import SearchIcon from "@mui/icons-material/Search";
 
-const Home = ({ products, handleAddItemToCart, handleRemoveItemFromCart, setProducts, allProducts }) => {
+const Home = ({ products, handleAddItemToCart, handleRemoveItemFromCart, setProducts, allProducts, quantity }) => {
   const [searchItem, setSearchItem] = useState("");
 
   //Func search for item in searchBar input tag
@@ -30,7 +30,6 @@ const Home = ({ products, handleAddItemToCart, handleRemoveItemFromCart, setProd
       <Hero />
       <div className="searchBar-div">
         <input type="text" className="searchBar" value={searchItem} placeholder="search" onChange={searchForItem} />
-        {/* onChange={(e) => setInputText(e.target.value)} */}
         <SearchIcon className="searchIcon" />
       </div>
       <SubNavBar products={allProducts} setProducts={setProducts} allProducts={allProducts} />
@@ -38,7 +37,7 @@ const Home = ({ products, handleAddItemToCart, handleRemoveItemFromCart, setProd
         products={searchProducts}
         handleAddItemToCart={handleAddItemToCart}
         handleRemoveItemFromCart={handleRemoveItemFromCart}
-        // shopppingCart={shopppingCart}
+        // quantity={quantity}
       />
       <AboutUs />
       <ContactUs />

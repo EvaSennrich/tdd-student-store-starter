@@ -3,51 +3,8 @@ import "./ProductCard.css";
 import StarIcon from "@mui/icons-material/Star";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { Link } from "react-router-dom";
-// import { useState } from "react";
 
 const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handleRemoveItemFromCart, showDescription }) => {
-  // const [productID, setProductID] = useState('')
-
-  //   let {productId} = useParams()
-
-  //   let quantity = {
-  //   shopppingCart.find((item) => item.itemId === productID.id) ? shopppingCart.find((item) => item.itemId === productID.id).quantity : null
-  //   }
-
-  // useEffect( async () => {
-  //     // const fetchProducts = async () => {
-  //       try {
-  //         const response = await axios.get(`https://localhost:3001/store` + productId);
-  //         // console.log(response.data);
-  //         const data = await response?.data?.product;
-  //         setProductID(data)
-  //       } catch (e) {
-  //         //  If request not complete successfully, set error func
-  //         console.log(e);
-  //       }
-  //     // };
-  //   }, []);
-  // const handleAddItemToCart = (productId) => {
-  //   let newShopppingCart = [];
-
-  //   shoppingCart.map((item, index) => {
-  //     item.id === productId ? (newShopppingCart[index].quantity += 1) : null;
-  //     setShoppingCart([...shoppingCart]);
-  //     console.log("ERROR");
-  //   });
-  //   return "hello";
-  // };
-
-  // const handleRemoveItemFromCart = (productId) => {
-  //   shoppingCart.map((item, index) => {
-  //     let newShopppingCart = [];
-
-  //     item.id === productId ? (newShopppingCart[index].quantity -= 1) : null;
-  //     setShoppingCart([...shoppingCart]);
-  //     console.log("ERROR");
-  //   });
-  // };
-
   return (
     //Here I'm wrapping my img to be "clickable" and send/ route the user to whatever product.id was clicked on. -->  The logic is in the ProductDetail component file.
 
@@ -68,7 +25,7 @@ const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handle
             <StarHalfIcon style={{ color: "#ffdf00" }} />
           </div>
           <p className="product-price">{"Price: $" + product.price}</p>
-          <div className="quantityNum">{"Quantity: " + product.id}</div>
+          <div className="quantityNum">{product.quantity}</div>
         </div>
         <div className="product-btns">
           <div className="remove-btn">

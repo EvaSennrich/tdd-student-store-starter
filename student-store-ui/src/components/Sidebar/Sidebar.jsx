@@ -8,11 +8,16 @@ import AddCardIcon from "@mui/icons-material/AddCard";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
-export default function Sidebar({ isOpen, shoppingCart, products, checkoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm, handleOnToggle }) {
-  // const handleOnToggle = () => {
-  //   setIsOpen(!isOpen);
-  //   console.log("OPPPPEEEEEN");
-  // };
+export default function Sidebar({
+  isOpen,
+  shoppingCart,
+  products,
+  checkoutForm,
+  handleOnCheckoutFormChange,
+  handleOnSubmitCheckoutForm,
+  handleOnToggle,
+  subtotal,
+}) {
   return (
     <section className={isOpen ? "sidebar open" : "sidebar close"}>
       <div className="wrapper">
@@ -35,8 +40,7 @@ export default function Sidebar({ isOpen, shoppingCart, products, checkoutForm, 
           </div>
         </div>
       </div>
-      <ShoppingCart isOpen={isOpen} products={products} />
-      {/* <p>//conditional code</p> */}
+      <ShoppingCart isOpen={isOpen} products={products} subtotal={subtotal} shoppingCart={shoppingCart} />
     </section>
   );
 }

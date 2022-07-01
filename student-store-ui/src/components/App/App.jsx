@@ -20,11 +20,14 @@ export default function App() {
   const [error, setError] = useState("error");
   const [isOpen, setIsOpen] = useState(false);
   const [shoppingCart, setShoppingCart] = useState([]);
+  const [subtotal, setSubtotal] = useState("");
+  // const [productID, setProductID] = useState("");
+  // const [quantity, setQuantity] = useState("");
 
-  //useEffect calling the fethData func in first reload!
+  // setQuantity(shoppingCart.find((item) => item.itemId === productID.id) ? shoppingCart.find((item) => item.itemId === productID.id).quantity : null);
+
+  //Fetching data products func
   useEffect(() => {
-    //Fetching data from API func
-    //  It should make a GET request to the API's /store endpoint with the axios.get method.
     const fetchProducts = async () => {
       try {
         const response = await axios.get("https://codepath-store-api.herokuapp.com/store");
@@ -33,7 +36,7 @@ export default function App() {
         setProducts(data);
         setAllProducts(data);
       } catch {
-        //  If request not complete successfully, set error func
+        //  If request not complete successfully, set error
         setError(error);
       }
     };
@@ -46,39 +49,78 @@ export default function App() {
     console.log("OPPPPEENEED");
   };
 
-  // const handleAddItemToCart = (pid) => {
-  //   let newShopppingCart = [];
-  //   shoppingCart.map((item, index) => {
-  //     item.id === productId ? (newShopppingCart[index].quantity += 1) : null;
-  //     setShoppingCart([...shoppingCart]);
-  //     console.log("ERROR");
-  //   });
-  //   return "hello";
-  //   console.log(pid);
-  // };
+  let cart = {}; //pId = productId
+  const handleAddItemToCart = (pId) => {
+    // if (cart.hasOwnProperty(pId)) {
+    //   cart[pId]++;
+    // } else {
+    //   cart[pId] = 1;
+    // }
+    // setShoppingCart([...shoppingCart]);
+    // console.log(shoppingCart);
 
-  // const handleRemoveItemFromCart = (pid) => {
-  //   shoppingCart.map((item, index) => {
-  //     let newShopppingCart = [];
+    let productAdded;
+    for (var i = 0; i < shoppingCart.length; i++) {
+      if (shoppingCart[i].itemId === pId) {
+        shoppingCart[i].quantity += 1;
+        setShoppingCart([...shoppingCart]);
+        let price = products.find((prod) => prod.id === pId).price + subtotal;
+        setSubtotal(price);
+      }
+    }
+    productAdded = {
+      itemId: pId,
+      quantity: 1,
+    };
+    setShoppingCart([productAdded, ...shoppingCart]);
+    let price = products.find((prod) => prod.id === pId).price + subtotal;
+    setSubtotal(price);
+    console.log("pId", pId);
+    console.log("PRODUCT ADDED", productAdded);
+    console.log("CART", shoppingCart);
+    console.log("SUBTOT", subtotal);
+  };
 
-  //     item.id === productId ? (newShopppingCart[index].quantity -= 1) : null;
-  //     setShoppingCart([...shoppingCart]);
-  //     console.log("ERROR");
-  //   });
-  //   console.log(pid);
-  // };
-
-  // const handleOnCheckoutForm = () => {};
-
+  const handleRemoveItemFromCart = (pId) => {
+    for (var i = 0; i < shoppingCart.length; i++) {
+      if (shoppingCart[i].itemId === pId) {
+        if (shoppingCart[i].quantity != 1) {
+          shoppingCart[i].quantity -= 1;
+          setShoppingCart([...shoppingCart]);
+          let price = products.find((prod) => prod.id === pId).price - subtotal;
+          setSubtotal(price);
+        } else {
+          shoppingCart.splice(i, 1);
+          setShoppingCart([...shoppingCart]);
+          let price = products.find((prod) => prod.id === pId).price - subtotal;
+          setSubtotal(price);
+          console.log("deleted");
+          console.log(shoppingCart);
+        }
+      }
+    }
+  };
   return (
     <div className="app">
-      {/*  this helps to render/ call every single component */}
       <BrowserRouter>
         <main>
           <Navbar />
-          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} products={products} />
+          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} products={products} shoppingCart={shoppingCart} subtotal={subtotal} />
           <Routes>
-            <Route path="/" element={<Home products={products} allProducts={allProducts} setProducts={setProducts} />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  products={products}
+                  allProducts={allProducts}
+                  setProducts={setProducts}
+                  handleAddItemToCart={handleAddItemToCart}
+                  handleRemoveItemFromCart={handleRemoveItemFromCart}
+                  shoppingCart={shoppingCart}
+                  // quantity={quantity}
+                />
+              }
+            />
             <Route path="/products/:productId" element={<ProductDetail product={products} />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/aboutus" element={<AboutUs />} />
