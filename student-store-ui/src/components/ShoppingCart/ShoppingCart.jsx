@@ -4,6 +4,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
+  // let subotal = Math.round()
+
   return (
     <div className={isOpen ? "shopping-cart cart-table" : "shopping-cart close"}>
       <div className="cart-table">
@@ -19,18 +21,22 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
             <span>Cost</span>
           </div>
         </div>
-        <div className="product-row">
-          <span>hey</span>
-          <span>hey</span>
-          <span>hey</span>
-          <span>hey</span>
-        </div>
+        {shoppingCart
+          ? shoppingCart.map((item, idx) => (
+              <div className="product-row" key={idx}>
+                <span>{products.find((prod) => prod.id === item.itemId).name}</span>
+                <span>{products.quantity}</span>
+                <span>{"$" + products.find((prod) => prod.id === item.itemId).price}</span>
+                <span>{"$" + item.quantity * products.find((prod) => prod.id === item.itemId).price}</span>
+              </div>
+            ))
+          : null}
         <div className="receipt">
           <div className="receipt-subtotal">
             <span className="subtotal">Subtotal</span>
             <span></span>
             <span></span>
-            <span>/addition/subtotal#</span>
+            {/* <span>{"$" + subTotal}</span> */}
           </div>
           <div className="receipt-taxes">
             <span className="subtotal">Taxes</span>

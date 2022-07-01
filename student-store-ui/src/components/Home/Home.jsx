@@ -11,7 +11,7 @@ import ContactUs from "../ContactUs/ContactUs";
 import Footer from "../Footer/Footer";
 import SearchIcon from "@mui/icons-material/Search";
 
-export default function Home({ products, handleAddItemToCart, handleRemoveItemToCart, setProducts, allProducts }) {
+const Home = ({ products, handleAddItemToCart, handleRemoveItemFromCart, setProducts, allProducts }) => {
   const [searchItem, setSearchItem] = useState("");
 
   //Func search for item in searchBar input tag
@@ -34,10 +34,17 @@ export default function Home({ products, handleAddItemToCart, handleRemoveItemTo
         <SearchIcon className="searchIcon" />
       </div>
       <SubNavBar products={allProducts} setProducts={setProducts} allProducts={allProducts} />
-      <ProductGrid products={searchProducts} />
+      <ProductGrid
+        products={searchProducts}
+        handleAddItemToCart={handleAddItemToCart}
+        handleRemoveItemFromCart={handleRemoveItemFromCart}
+        // shopppingCart={shopppingCart}
+      />
       <AboutUs />
       <ContactUs />
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;

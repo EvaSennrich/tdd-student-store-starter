@@ -33,7 +33,7 @@ export default function App() {
         setProducts(data);
         setAllProducts(data);
       } catch {
-        //  If the request does not complete successfully, or there are no products found in the response, it should create an error message and store it in the error state variable.
+        //  If request not complete successfully, set error func
         setError(error);
       }
     };
@@ -46,22 +46,29 @@ export default function App() {
     console.log("OPPPPEENEED");
   };
 
-  const handleAddItemToCart = (productId) => {
-    //      It should accept a single argument - productId
-    //  It should add that product to the shoppingCart if it doesn't exist, and set its quantity to 1.
-    //  If it does exist, it should increase the quantity by 1.
-    //  It should add the price of the product to the total price of the shoppingCart.
-  };
+  // const handleAddItemToCart = (pid) => {
+  //   let newShopppingCart = [];
+  //   shoppingCart.map((item, index) => {
+  //     item.id === productId ? (newShopppingCart[index].quantity += 1) : null;
+  //     setShoppingCart([...shoppingCart]);
+  //     console.log("ERROR");
+  //   });
+  //   return "hello";
+  //   console.log(pid);
+  // };
 
-  const handleRemoveItemFromCart = (productId) => {
-    // When called...
-    //  It should accept a single argument - productId
-    //  It should decrease the quantity of the item in the shoppingCart by 1, but only if it already exists.
-    //  If it doesn't exist, the function should do nothing.
-    //  If the new quantity is 0, it should remove the item from the shoppingCart
-  };
+  // const handleRemoveItemFromCart = (pid) => {
+  //   shoppingCart.map((item, index) => {
+  //     let newShopppingCart = [];
 
-  const handleOnCheckoutForm = () => {};
+  //     item.id === productId ? (newShopppingCart[index].quantity -= 1) : null;
+  //     setShoppingCart([...shoppingCart]);
+  //     console.log("ERROR");
+  //   });
+  //   console.log(pid);
+  // };
+
+  // const handleOnCheckoutForm = () => {};
 
   return (
     <div className="app">

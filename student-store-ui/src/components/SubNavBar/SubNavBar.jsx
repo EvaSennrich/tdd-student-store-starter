@@ -2,7 +2,6 @@ import React from "react";
 import "./SubNavBar.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ProductCard from "../ProductCard/ProductCard";
 
 const SubNavBar = ({ products, setProducts, allProducts }) => {
   // const [category, setCategory] = useState("");

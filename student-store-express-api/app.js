@@ -13,12 +13,10 @@ app.use("/store", storeRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({ ping: "pong" });
-  console.log("--->Error");
 });
 
 app.get("/store", (req, res) => {
   res.status(200).json({ ping: "pong" });
-  console.log("--->Error");
 });
 
 app.use((req, res, next) => {
