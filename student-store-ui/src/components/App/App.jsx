@@ -26,7 +26,7 @@ export default function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("https://codepath-store-api.herokuapp.com/store");
+        const response = await axios.get("http://localhost:3001/store");
         // console.log(response.data);
         const data = await response?.data?.products;
         setProducts(data);
@@ -97,6 +97,11 @@ export default function App() {
       }
     }
   };
+
+  const handleOnCheckoutFormChange = (name, value) => {};
+
+  const handleOnSubmitCheckoutForm = () => {};
+
   return (
     <div className="app">
       <BrowserRouter>

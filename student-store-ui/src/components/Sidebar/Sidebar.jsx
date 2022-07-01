@@ -41,6 +41,7 @@ export default function Sidebar({
         </div>
       </div>
       <ShoppingCart isOpen={isOpen} products={products} subtotal={subtotal} shoppingCart={shoppingCart} />
+      {/* <CheckoutForm /> */}
     </section>
   );
 }
