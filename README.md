@@ -23,11 +23,11 @@ Second Submission
 - [X] Displays the following sections: header, banner, search, product grid, about, contact, and footer.
 - [X] On initial page load, display the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store).
 - [X] User can click on the categories (Clothing, food, etc) to filter the product grid by type.
-- [ ] User can search for products.
+- [X] User can search for products.
 - [X] User can click on a product in the grid to view additional product details. Navigation is via a React Router.
 - [X] User can click to expand the shopping cart in the left navigation.
-- [ ] User can click the '+' button on a product cart to increment that product in the shopping cart.
-- [ ] User can click the '-' button on a product cart to increment that product in the shopping cart.
+- [X] User can click the '+' button on a product cart to increment that product in the shopping cart.
+- [X] User can click the '-' button on a product cart to increment that product in the shopping cart.
 - [X] Shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] User can check out, and can view receipt upon completion.
 
@@ -76,16 +76,16 @@ The following specifications were met on the Express backend and the React front
     - [X] At minimum, **create these five handlers**:
       - [X] The **`handleOnToggle`** function. When called...
         - [X] It should toggle the open/closed state of the `Sidebar`.
-      - [ ] The **`handleAddItemToCart`** function. When called...
-        - [ ] It should accept a single argument - `productId`
-        - [ ] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
-        - [ ] If it does exist, it should increase the quantity by `1`.
-        - [ ] It should add the price of the product to the total price of the `shoppingCart`.
-      - [ ] The **`handleRemoveItemFromCart`** function. When called...
-        - [ ] It should accept a single argument - `productId`
-        - [ ] It should decrease the quantity of the item in the `shoppingCart` by `1`, but only if it already exists.
-        - [ ] If it doesn't exist, the function should do nothing.
-        - [ ] If the new quantity is `0`, it should remove the item from the `shoppingCart`
+      - [X] The **`handleAddItemToCart`** function. When called...
+        - [X] It should accept a single argument - `productId`
+        - [X] It should add that product to the `shoppingCart` if it doesn't exist, and set its quantity to `1`.
+        - [X] If it does exist, it should increase the quantity by `1`.
+        - [X] It should add the price of the product to the total price of the `shoppingCart`.
+      - [X] The **`handleRemoveItemFromCart`** function. When called...
+        - [X] It should accept a single argument - `productId`
+        - [X] It should decrease the quantity of the item in the `shoppingCart` by `1`, but only if it already exists.
+        - [X] If it doesn't exist, the function should do nothing.
+        - [X] If the new quantity is `0`, it should remove the item from the `shoppingCart`
       - [ ] The **`handleOnCheckoutFormChange`** function. When called...
         - [ ] It should receive two arguments:
           - [ ] `name` - the `name` attribute of the input being updated
