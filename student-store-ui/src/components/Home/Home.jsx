@@ -10,6 +10,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import ContactUs from "../ContactUs/ContactUs";
 import Footer from "../Footer/Footer";
 import SearchIcon from "@mui/icons-material/Search";
+// import NotFound from "../NotFound/NotFound";
 
 const Home = ({ products, handleAddItemToCart, handleRemoveItemFromCart, setProducts, allProducts, quantity }) => {
   const [searchItem, setSearchItem] = useState("");
@@ -38,6 +39,7 @@ const Home = ({ products, handleAddItemToCart, handleRemoveItemFromCart, setProd
         handleAddItemToCart={handleAddItemToCart}
         handleRemoveItemFromCart={handleRemoveItemFromCart}
         // quantity={quantity}
+        // {products === null ? <NotFound/> : null}
       />
       <AboutUs />
       <ContactUs />

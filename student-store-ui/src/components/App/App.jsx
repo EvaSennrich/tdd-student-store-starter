@@ -38,11 +38,11 @@ export default function App() {
     };
     fetchProducts();
   }, []);
-  console.log(products);
+  // console.log(products);
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen);
-    console.log("OPPPPEENEED");
+    // console.log("OPPPPEENEED");
   };
 
   let cart = {}; //pId = productId
@@ -72,10 +72,10 @@ export default function App() {
     setShoppingCart([productAdded, ...shoppingCart]);
     let price = products.find((prod) => prod.id === pId).price + subtotal;
     setSubtotal(price).toFixed(2);
-    console.log("pId", pId);
-    console.log("PRODUCT ADDED", productAdded);
-    console.log("CART", shoppingCart);
-    console.log("SUBTOT", subtotal);
+    // console.log("pId", pId);
+    // console.log("PRODUCT ADDED", productAdded);
+    // console.log("CART", shoppingCart);
+    // console.log("SUBTOT", subtotal);
   };
 
   const handleRemoveItemFromCart = (pId) => {
@@ -134,6 +134,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/contactus" element={<ContactUs />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </BrowserRouter>

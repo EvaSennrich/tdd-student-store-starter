@@ -10,38 +10,40 @@ class Store {
   }
 
   // fetch a single product by its ID
-  static productsByID(productsByID) {
+  static productsByID(productById) {
     const product = storage
       .get("products")
-      .find({ id: Number(productsByID) })
+      .find({ id: Number(productById) })
       .value();
-    console.log("----->>", productsByID);
+    console.log("----->>", product);
     return product;
   }
 
   //get order ids
   static getId() {
     const purchases = storage.get("purchases").value();
-    return (purchases.length += 1);
+    return purchases.length + 1;
   }
 
   //calculating the total per order
-  static totalOrder(shoppingCart) {
-    let subTotal = 0;
 
+  static totalOrder(shoppingCart) {
+    let subTotalEs = 0;
     shoppingCart.forEach((el) => {
       let product = this.productsByID(el.itemId);
       let unitPrice = product.price;
       let itemPrice = unitPrice * el.quantity;
-      return (subTotal += itemPrice); //DOUBLE CHECK THIS LINE
+      subTotalEs += itemPrice; //DOUBLE CHECK THIS LINE
     });
+    subTotalEs = Math.round((subTotalEs + Number.EPSILON) * 100) / 100;
+    return subTotalEs;
   }
 
   //creating issue date per order
   static issueOrder() {
     let currenDate = new Date();
-    let day = currenDate.getDay();
-    let month = currenDate.getMonth();
+    let day = currenDate.getDate();
+    let month = currenDate.getMonth() + 1;
     let year = currenDate.getFullYear();
 
     let orderDate = "Order Issued:" + month + "/" + day + "/" + year;
@@ -55,7 +57,7 @@ class Store {
       name: user.name,
       email: user.email,
       order: shoppingCart,
-      total: this.totalOrder(shoppingCart) * 2,
+      total: (this.totalOrder(shoppingCart) * 1.0875).toFixed(2),
       createAt: this.issueOrder(),
     };
 
@@ -63,8 +65,8 @@ class Store {
     // if (!quantity || !itemId) {
     //   throw new BadRequestError();
     // }
-
-    storage.get("purchases").push(userOrder).write();
+    let currentPurchaseOrder = storage.get("purchases");
+    currentPurchaseOrder.push(userOrder).write();
     return userOrder;
   }
 }
