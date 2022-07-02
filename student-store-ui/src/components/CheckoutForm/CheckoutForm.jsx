@@ -1,20 +1,23 @@
 import React from "react";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import "./CheckoutForm.css";
+import { useState } from "react";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ isOpen, shoppingCart, checkoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm }) => {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="checkout-form">
       <div className="header">
         <h4>
-          Payment Info <MonetizationOnIcon style={{ marginLeft: "3rem", fontSize: "1.5rem" }} />
+          Payment Info <MonetizationOnIcon style={{ marginLeft: "2.7rem", fontSize: "1.7rem" }} />
         </h4>
       </div>
       <div className="inputs-form">
         <h4 className="name-form">Name</h4>
-        <input className="name-input" type={"text"} placeholder="Student Name"></input>
+        <input className="checkout-form-input" placeholder="Student Name"></input>
         <h4 className="email-form">Email</h4>
-        <input className="email-input" type={"email"} placeholder="student@codepath.org"></input>
+        <input className="checkout-form-input" type="email" name="email" placeholder="student@codepath.org" value={email}></input>
       </div>
       <div className="consent">
         <input className="checkBox" type={"checkbox"}></input>
@@ -27,6 +30,18 @@ const CheckoutForm = () => {
     </div>
   );
 };
+//The first input should have:
+//  the type prop set to email
+//  the name prop set to email
+//  the placeholder prop set to student@codepath.org
+//  the value prop set by checkoutForm.email.
+//  a valid onChange prop that uses the handleOnCheckoutFormChange function to update the checkoutForm state
+//  The second input should have:
+//  the type prop set to text
+//  the name prop set to name
+//  the placeholder prop set to Student Name
+//  the value prop set by checkoutForm.name.
+//  a valid onChange prop that uses the handleOnCheckoutFormChange function to update the checkoutForm state
 
 export default CheckoutForm;
 
