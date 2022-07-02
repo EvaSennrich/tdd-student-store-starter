@@ -72,10 +72,10 @@ The following specifications were met on the Express backend and the React front
       - [X] Each object in the array should have two fields:
         - [X] The `itemId` field should store the `id` of the item being purchased.
         - [X] The `quantity` field should store a number representing how many of that item the user is purchasing.
-    - [ ] `checkoutForm` - the user's information that will be sent to the API when they checkout.
-  - [ ] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
-    - [ ] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
-    - [ ] When the request completes successfully, it should store the `products` returned by the response in state.
+    - [X] `checkoutForm` - the user's information that will be sent to the API when they checkout.
+  - [X] Leverage the `useEffect` hook to ensure that when the `App.jsx` component is mounted to the screen...
+    - [X] It should make a `GET` request to the API's `/store` endpoint with the `axios.get` method.
+    - [X] When the request completes successfully, it should store the `products` returned by the response in state.
     - [ ] If the request does not complete successfully, or there are no `products` found in the response,
             it should create an error message and store it in the `error` state variable.
   - [X] The `App.jsx` component should define handler functions to be passed as props to the `Home` and `ProductDetail` components.
@@ -93,23 +93,23 @@ The following specifications were met on the Express backend and the React front
         - [X] It should decrease the quantity of the item in the `shoppingCart` by `1`, but only if it already exists.
         - [X] If it doesn't exist, the function should do nothing.
         - [X] If the new quantity is `0`, it should remove the item from the `shoppingCart`
-      - [ ] The **`handleOnCheckoutFormChange`** function. When called...
-        - [ ] It should receive two arguments:
-          - [ ] `name` - the `name` attribute of the input being updated
-          - [ ] `value` - the new value to set for that input
-        - [ ] It should update the `checkoutForm` object with the new value from the correct input(s)
-      - [ ] The **`handleOnSubmitCheckoutForm`** function. When called...
-        - [ ] It should submit the user's order to the API
-        - [ ] To submit the user's order, it should leverage the `axios.post` method to send a `POST` request to the `/store` endpoint.
-        - [ ] The body of that `POST` request should be an object with two fields:
-          - [ ] The `user` field:
-            - [ ] Should be an object containing `name` and `email` properties
-            - [ ] Each property should be set to the correct value found in the `checkoutForm`
-          - [ ] The `shoppingCart` field:
-            - [ ] Should contain the user's order formatted as an array of objects.
-            - [ ] Each object in the array should have two fields:
-              - [ ] The `itemId` field should store the `id` of the item being purchased.
-              - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
+      - [X] The **`handleOnCheckoutFormChange`** function. When called...
+        - [X] It should receive two arguments:
+          - [X] `name` - the `name` attribute of the input being updated
+          - [X] `value` - the new value to set for that input
+        - [X] It should update the `checkoutForm` object with the new value from the correct input(s)
+      - [X] The **`handleOnSubmitCheckoutForm`** function. When called...
+        - [X] It should submit the user's order to the API
+        - [X] To submit the user's order, it should leverage the `axios.post` method to send a `POST` request to the `/store` endpoint.
+        - [X] The body of that `POST` request should be an object with two fields:
+          - [X] The `user` field:
+            - [X] Should be an object containing `name` and `email` properties
+            - [X] Each property should be set to the correct value found in the `checkoutForm`
+          - [X] The `shoppingCart` field:
+            - [X] Should contain the user's order formatted as an array of objects.
+            - [X] Each object in the array should have two fields:
+              - [X] The `itemId` field should store the `id` of the item being purchased.
+              - [X] The `quantity` field should store a number representing how many of that item the user is purchasing.
             - [ ] Don't include the `total` price here, since we'll be calculating that on the backend. Remember to never trust the client!
 
 **Navbar.jsx**
@@ -236,26 +236,26 @@ The following specifications were met on the Express backend and the React front
     - `handleOnCheckoutFormChange` - handler function to update the `checkoutForm`
     - `handleOnSubmitCheckoutForm` - handler function to submit the user's order to the API
   - [X] Should render two `input` elements, each with the `className` of `checkout-form-input`
-    - [ ] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
-      - [ ] The first input should have:
-        - [ ] the `type` prop set to `email`
-        - [ ] the `name` prop set to `email`
-        - [ ] the `placeholder` prop set to `student@codepath.org`
-        - [ ] the `value` prop set by `checkoutForm.email`.
-        - [ ] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
-      - [ ] The second input should have:
-        - [ ] the `type` prop set to `text`
-        - [ ] the `name` prop set to `name`
-        - [ ] the `placeholder` prop set to `Student Name`
-        - [ ] the `value` prop set by `checkoutForm.name`.
-        - [ ] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
-  - [ ] Should render a `button` element with the `className` of `checkout-button`.
-    - [ ] It should contain the text `Checkout`.
-    - [ ] When clicked, it should call the `handleOnSubmit` function.
-      - [ ] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
+    - [X] The `checkoutForm` prop should supply the correct props needed to create the two controlled inputs:
+      - [X] The first input should have:
+        - [X] the `type` prop set to `email`
+        - [X] the `name` prop set to `email`
+        - [X] the `placeholder` prop set to `student@codepath.org`
+        - [X] the `value` prop set by `checkoutForm.email`.
+        - [X] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
+      - [X] The second input should have:
+        - [X] the `type` prop set to `text`
+        - [X] the `name` prop set to `name`
+        - [X] the `placeholder` prop set to `Student Name`
+        - [X] the `value` prop set by `checkoutForm.name`.
+        - [X] a valid `onChange` prop that uses the `handleOnCheckoutFormChange` function to update the `checkoutForm` state
+  - [X] Should render a `button` element with the `className` of `checkout-button`.
+    - [X] It should contain the text `Checkout`.
+    - [X] When clicked, it should call the `handleOnSubmit` function.
+      - [X] If that request fails, the `CheckoutForm` component should display an error message inside an element with the `className` of `error`.
       - [ ] If the `POST` request is successful...
         - [ ] The `CheckoutForm` component should display a success message that contains the text `"Success!"` inside an element with the `className` of `success`.
-        - [ ] The `shoppingCart` should be emptied
+        - [X] The `shoppingCart` should be emptied
         - [ ] The `checkoutForm` should be reset to its default state.
 
 **Server** - Create an Express server
@@ -284,17 +284,17 @@ The following specifications were met on the Express backend and the React front
       - [ ] When either the `shoppingCart` or `user` fields are missing, it should throw a `400` error.
       - [ ] If there are duplicate items in the `shoppingCart`, it should throw a `400` error.
       - [ ] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
-      - [ ] When both are there, it should calculate the total cost of all the items (including quantities), add a `8.75%` tax to the total, and create a new purchase object containing 6 required fields and 1 optional field:
+      - [X] When both are there, it should calculate the total cost of all the items (including quantities), add a `8.75%` tax to the total, and create a new purchase object containing 6 required fields and 1 optional field:
         - **required**:
-          - [ ] `id` - the new `id` of the purchase should be equal to one more than the current number of existing purchases
-          - [ ] `name` - the name of the user making the purchase
-          - [ ] `email` - the email of the user making the purchase
-          - [ ] `order` - the `shoppingCart` value sent in the `POST` request
-          - [ ] `total` - the calculated total of the order
+          - [X] `id` - the new `id` of the purchase should be equal to one more than the current number of existing purchases
+          - [X] `name` - the name of the user making the purchase
+          - [X] `email` - the email of the user making the purchase
+          - [X] `order` - the `shoppingCart` value sent in the `POST` request
+          - [X] `total` - the calculated total of the order
           - [X] `createdAt` - a string representation of the date and time when the order was placed
         - **optional**:
-          - [ ] `receipt` - text describing the order (what might go on a receipt)
-      - [ ] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
+          - [X] `receipt` - text describing the order (what might go on a receipt)
+      - [X] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
 
 ---
 
