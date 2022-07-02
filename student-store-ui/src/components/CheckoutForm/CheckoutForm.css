@@ -46,3 +46,39 @@
   margin: 0.7rem;
   margin-right: 15rem;
 }
+
+.checkout-form .open {
+  transform: rotateY(180deg);
+  width: 575px;
+}
+
+.checkout-form .close {
+  /* width: 90px; */
+  display: none;
+}
+
+/* .terms {
+  margin-left: 2px;
+  color: violet;
+} */
+
+.checkout-success {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+.checkout-success h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.content-checkout {
+  width: 18rem;
+  margin-left: 3rem;
+  margin-right: 1rem;
+}
+
+.content-checkout p {
+  margin: 0;
+}

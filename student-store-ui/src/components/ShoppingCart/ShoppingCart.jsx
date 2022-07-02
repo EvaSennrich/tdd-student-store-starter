@@ -3,7 +3,7 @@ import "./ShoppingCart.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
-const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal, checkoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm }) => {
+const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal, setShoppingCart, checkoutForm, handleOnCheckoutFormChange, handleOnSubmitCheckoutForm }) => {
   //global variables for the user receipt
   let subtotalPrice = Math.round((subtotal + Number.EPSILON) * 100) / 100;
   let taxes = Math.round((subtotalPrice * 0.0875 + Number.EPSILON) * 100) / 100;
@@ -57,7 +57,7 @@ const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal, checkoutForm, 
           </div>
         </div>
       </div>
-      <CheckoutForm />
+      <CheckoutForm setShoppingCart={setShoppingCart} shoppingCart={shoppingCart} />
     </div>
   );
 };

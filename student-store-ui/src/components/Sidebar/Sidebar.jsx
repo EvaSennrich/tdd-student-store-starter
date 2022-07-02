@@ -11,6 +11,7 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm";
 export default function Sidebar({
   isOpen,
   shoppingCart,
+  setShoppingCart,
   products,
   checkoutForm,
   handleOnCheckoutFormChange,
@@ -40,7 +41,7 @@ export default function Sidebar({
           </div>
         </div>
       </div>
-      <ShoppingCart isOpen={isOpen} products={products} subtotal={subtotal} shoppingCart={shoppingCart} />
+      <ShoppingCart isOpen={isOpen} products={products} subtotal={subtotal} shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} />
       {/* <CheckoutForm /> */}
     </section>
   );

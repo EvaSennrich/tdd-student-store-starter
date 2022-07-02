@@ -98,7 +98,7 @@ export default function App() {
     }
   };
 
-  const handleOnCheckoutFormChange = (name, value) => {};
+  // const handleOnCheckoutFormChange = (name, value) => {};
 
   const handleOnSubmitCheckoutForm = () => {};
 
@@ -107,7 +107,14 @@ export default function App() {
       <BrowserRouter>
         <main>
           <Navbar />
-          <Sidebar isOpen={isOpen} handleOnToggle={handleOnToggle} products={products} shoppingCart={shoppingCart} subtotal={subtotal} />
+          <Sidebar
+            isOpen={isOpen}
+            handleOnToggle={handleOnToggle}
+            products={products}
+            shoppingCart={shoppingCart}
+            setShoppingCart={setShoppingCart}
+            subtotal={subtotal}
+          />
           <Routes>
             <Route
               path="/"
