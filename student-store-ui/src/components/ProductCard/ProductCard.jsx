@@ -38,7 +38,7 @@ const ProductCard = ({ product, productId, quantity, handleAddItemToCart, handle
               +
             </button>
           </div>
-          {/* {quantity ? <span className="product-quantity">quantity</span> : null} */}
+          {/* {quantity ? <span className="product-quantity">{product.quantity}</span> : null} */}
         </div>
       </div>
     </div>

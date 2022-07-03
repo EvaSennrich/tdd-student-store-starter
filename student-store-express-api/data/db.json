@@ -899,6 +899,561 @@
           "After taxes and fees were applied, the total comes out to 438.24"
         ]
       }
+    },
+    {
+      "id": 80,
+      "name": "we",
+      "email": "ee",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "1.63",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "we",
+          "email": "ee"
+        },
+        "receiptContent": [
+          "Showing receipt for we available at ee:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "Before taxes, the subtotal was 1.5",
+          "After taxes and fees were applied, the total comes out to 1.63"
+        ]
+      }
+    },
+    {
+      "id": 81,
+      "name": "we",
+      "email": "ee",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "1.63",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "we",
+          "email": "ee"
+        },
+        "receiptContent": [
+          "Showing receipt for we available at ee:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "Before taxes, the subtotal was 1.5",
+          "After taxes and fees were applied, the total comes out to 1.63"
+        ]
+      }
+    },
+    {
+      "id": 82,
+      "name": "we",
+      "email": "ee",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "1.63",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "we",
+          "email": "ee"
+        },
+        "receiptContent": [
+          "Showing receipt for we available at ee:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "Before taxes, the subtotal was 1.5",
+          "After taxes and fees were applied, the total comes out to 1.63"
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "name": "carlos",
+      "email": "car@hotmail.com",
+      "order": [
+        {
+          "itemId": 5,
+          "quantity": 1
+        },
+        {
+          "itemId": 4,
+          "quantity": 1
+        }
+      ],
+      "total": "11.69",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "carlos",
+          "email": "car@hotmail.com"
+        },
+        "receiptContent": [
+          "Showing receipt for carlos available at car@hotmail.com:",
+          "1 total undefined purchased at a cost of 7.5 for a total cost of 7.5.",
+          "1 total undefined purchased at a cost of 3.25 for a total cost of 3.25.",
+          "Before taxes, the subtotal was 10.75",
+          "After taxes and fees were applied, the total comes out to 11.69"
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "name": "e",
+      "email": "e",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        }
+      ],
+      "total": "3.26",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "e",
+          "email": "e"
+        },
+        "receiptContent": [
+          "Showing receipt for e available at e:",
+          "2 total undefined purchased at a cost of 1.5 for a total cost of 3.",
+          "Before taxes, the subtotal was 3",
+          "After taxes and fees were applied, the total comes out to 3.26"
+        ]
+      }
+    },
+    {
+      "id": 85,
+      "name": "w",
+      "email": "w",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "1.63",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "w",
+          "email": "w"
+        },
+        "receiptContent": [
+          "Showing receipt for w available at w:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "Before taxes, the subtotal was 1.5",
+          "After taxes and fees were applied, the total comes out to 1.63"
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "name": "3",
+      "email": "3",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "1.63",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "3",
+          "email": "3"
+        },
+        "receiptContent": [
+          "Showing receipt for 3 available at 3:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "Before taxes, the subtotal was 1.5",
+          "After taxes and fees were applied, the total comes out to 1.63"
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "name": "e",
+      "email": "e",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "1.08",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "e",
+          "email": "e"
+        },
+        "receiptContent": [
+          "Showing receipt for e available at e:",
+          "1 total undefined purchased at a cost of 0.99 for a total cost of 0.99.",
+          "Before taxes, the subtotal was 0.99",
+          "After taxes and fees were applied, the total comes out to 1.08"
+        ]
+      }
+    },
+    {
+      "id": 88,
+      "name": "x",
+      "email": "x",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        }
+      ],
+      "total": "3.26",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "x",
+          "email": "x"
+        },
+        "receiptContent": [
+          "Showing receipt for x available at x:",
+          "2 total undefined purchased at a cost of 1.5 for a total cost of 3.",
+          "Before taxes, the subtotal was 3",
+          "After taxes and fees were applied, the total comes out to 3.26"
+        ]
+      }
+    },
+    {
+      "id": 89,
+      "name": "e",
+      "email": "e",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "e",
+          "email": "e"
+        },
+        "receiptContent": [
+          "Showing receipt for e available at e:",
+          "2 total undefined purchased at a cost of 0.99 for a total cost of 1.98.",
+          "Before taxes, the subtotal was 1.98",
+          "After taxes and fees were applied, the total comes out to 2.15"
+        ]
+      }
+    },
+    {
+      "id": 90,
+      "name": "s",
+      "email": "s",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "s",
+          "email": "s"
+        },
+        "receiptContent": [
+          "Showing receipt for s available at s:",
+          "2 total undefined purchased at a cost of 0.99 for a total cost of 1.98.",
+          "Before taxes, the subtotal was 1.98",
+          "After taxes and fees were applied, the total comes out to 2.15"
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "name": "w",
+      "email": "w",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "w",
+          "email": "w"
+        },
+        "receiptContent": [
+          "Showing receipt for w available at w:",
+          "2 total undefined purchased at a cost of 0.99 for a total cost of 1.98.",
+          "Before taxes, the subtotal was 1.98",
+          "After taxes and fees were applied, the total comes out to 2.15"
+        ]
+      }
+    },
+    {
+      "id": 92,
+      "name": "s",
+      "email": "a",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "1.08",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "s",
+          "email": "a"
+        },
+        "receiptContent": [
+          "Showing receipt for s available at a:",
+          "1 total undefined purchased at a cost of 0.99 for a total cost of 0.99.",
+          "Before taxes, the subtotal was 0.99",
+          "After taxes and fees were applied, the total comes out to 1.08"
+        ]
+      }
+    },
+    {
+      "id": 93,
+      "name": "1",
+      "email": "1",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "1.08",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "1",
+          "email": "1"
+        },
+        "receiptContent": [
+          "Showing receipt for 1 available at 1:",
+          "1 total undefined purchased at a cost of 0.99 for a total cost of 0.99.",
+          "Before taxes, the subtotal was 0.99",
+          "After taxes and fees were applied, the total comes out to 1.08"
+        ]
+      }
+    },
+    {
+      "id": 94,
+      "name": "e",
+      "email": "e",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "e",
+          "email": "e"
+        },
+        "receiptContent": [
+          "Showing receipt for e available at e:",
+          "2 total undefined purchased at a cost of 0.99 for a total cost of 1.98.",
+          "Before taxes, the subtotal was 1.98",
+          "After taxes and fees were applied, the total comes out to 2.15"
+        ]
+      }
+    },
+    {
+      "id": 95,
+      "name": "GIPHY-PARTY",
+      "email": "evasennrich@gmail.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        }
+      ],
+      "total": "3.26",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "GIPHY-PARTY",
+          "email": "evasennrich@gmail.com"
+        },
+        "receiptContent": [
+          "Showing receipt for GIPHY-PARTY available at evasennrich@gmail.com:",
+          "2 total undefined purchased at a cost of 1.5 for a total cost of 3.",
+          "Before taxes, the subtotal was 3",
+          "After taxes and fees were applied, the total comes out to 3.26"
+        ]
+      }
+    },
+    {
+      "id": 96,
+      "name": "q",
+      "email": "q",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "1.08",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "q",
+          "email": "q"
+        },
+        "receiptContent": [
+          "Showing receipt for q available at q:",
+          "1 total undefined purchased at a cost of 0.99 for a total cost of 0.99.",
+          "Before taxes, the subtotal was 0.99",
+          "After taxes and fees were applied, the total comes out to 1.08"
+        ]
+      }
+    },
+    {
+      "id": 97,
+      "name": "1",
+      "email": "1",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        }
+      ],
+      "total": "3.26",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "1",
+          "email": "1"
+        },
+        "receiptContent": [
+          "Showing receipt for 1 available at 1:",
+          "2 total undefined purchased at a cost of 1.5 for a total cost of 3.",
+          "Before taxes, the subtotal was 3",
+          "After taxes and fees were applied, the total comes out to 3.26"
+        ]
+      }
+    },
+    {
+      "id": 98,
+      "name": "q",
+      "email": "q",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        }
+      ],
+      "total": "3.26",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "q",
+          "email": "q"
+        },
+        "receiptContent": [
+          "Showing receipt for q available at q:",
+          "2 total undefined purchased at a cost of 1.5 for a total cost of 3.",
+          "Before taxes, the subtotal was 3",
+          "After taxes and fees were applied, the total comes out to 3.26"
+        ]
+      }
+    },
+    {
+      "id": 99,
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 5,
+          "quantity": 2
+        }
+      ],
+      "total": "17.94",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {},
+        "receiptContent": [
+          "Showing receipt for undefined available at undefined:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "2 total undefined purchased at a cost of 7.5 for a total cost of 15.",
+          "Before taxes, the subtotal was 16.5",
+          "After taxes and fees were applied, the total comes out to 17.94"
+        ]
+      }
+    },
+    {
+      "id": 100,
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 5,
+          "quantity": 2
+        }
+      ],
+      "total": "17.94",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {},
+        "receiptContent": [
+          "Showing receipt for undefined available at undefined:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "2 total undefined purchased at a cost of 7.5 for a total cost of 15.",
+          "Before taxes, the subtotal was 16.5",
+          "After taxes and fees were applied, the total comes out to 17.94"
+        ]
+      }
+    },
+    {
+      "id": 101,
+      "name": "eva",
+      "email": "evasennrich@gmail.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "1.63",
+      "createAt": "Order Issued:7/2/2022",
+      "receipt": {
+        "userInfo": {
+          "name": "eva",
+          "email": "evasennrich@gmail.com"
+        },
+        "receiptContent": [
+          "Showing receipt for eva available at evasennrich@gmail.com:",
+          "1 total undefined purchased at a cost of 1.5 for a total cost of 1.5.",
+          "Before taxes, the subtotal was 1.5",
+          "After taxes and fees were applied, the total comes out to 1.63"
+        ]
+      }
     }
   ]
 }

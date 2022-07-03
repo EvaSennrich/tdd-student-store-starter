@@ -98,9 +98,7 @@ export default function App() {
     }
   };
 
-  // const handleOnCheckoutFormChange = (name, value) => {};
-
-  const handleOnSubmitCheckoutForm = () => {};
+  // const clearShoppingCart = () => {};
 
   return (
     <div className="app">

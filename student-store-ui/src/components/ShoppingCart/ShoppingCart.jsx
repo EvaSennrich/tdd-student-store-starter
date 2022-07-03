@@ -9,7 +9,7 @@ const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal, setShoppingCar
   let taxes = Math.round((subtotalPrice * 0.0875 + Number.EPSILON) * 100) / 100;
   let totalPrice = Math.round((subtotalPrice + taxes + Number.EPSILON) * 100) / 100;
 
-  console.log("CART", shoppingCart);
+  // console.log("CART", shoppingCart);
 
   return (
     <div className={isOpen ? "shopping-cart cart-table" : "shopping-cart close"}>
@@ -36,28 +36,29 @@ const ShoppingCart = ({ isOpen, products, shoppingCart, subtotal, setShoppingCar
               </div>
             ))
           : null}
-        <div className="receipt">
+
+        <div id="receipt" className="receipt">
           <div className="receipt-subtotal">
             <span className="subtotal">Subtotal</span>
             <span></span>
             <span></span>
-            <span>{"$" + subtotalPrice}</span>
+            <span id="subtotal">{"$" + subtotalPrice}</span>
           </div>
           <div className="receipt-taxes">
             <span className="subtotal">Taxes</span>
             <span></span>
             <span></span>
-            <span>{"$" + taxes}</span>
+            <span id="taxes">{"$" + taxes}</span>
           </div>
           <div className="receipt-total">
             <span className="subtotal">Total</span>
             <span></span>
             <span></span>
-            <span>{"$" + totalPrice}</span>
+            <span id="total">{"$" + totalPrice}</span>
           </div>
         </div>
       </div>
-      <CheckoutForm setShoppingCart={setShoppingCart} shoppingCart={shoppingCart} />
+      <CheckoutForm setShoppingCart={setShoppingCart} shoppingCart={shoppingCart} subtotalPrice={subtotalPrice} subtotal={subtotal} />
     </div>
   );
 };

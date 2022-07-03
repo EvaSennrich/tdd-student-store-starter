@@ -4,8 +4,9 @@ import "./CheckoutForm.css";
 import { useState } from "react";
 import axios from "axios";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
+// import Receipt from "../Receipt/Receipt";
 
-const CheckoutForm = ({ isOpen, shoppingCart, checkoutForm, handleOnSubmitCheckoutForm, setShoppingCart }) => {
+const CheckoutForm = ({ isOpen, shoppingCart, setShoppingCart, subtotal }) => {
   const [emailInput, setEmailInput] = useState("");
   const [nameInput, setNameInput] = useState("");
 
@@ -16,8 +17,9 @@ const CheckoutForm = ({ isOpen, shoppingCart, checkoutForm, handleOnSubmitChecko
   const handleNameInputOnChange = (e) => {
     setNameInput(e.target.value);
   };
+
+  //func that post the receipt within the api db.json
   const handleOnCheckoutClick = () => {
-    console.log("CLICKED?");
     var userInfo = {
       name: nameInput,
       email: emailInput,
@@ -30,6 +32,9 @@ const CheckoutForm = ({ isOpen, shoppingCart, checkoutForm, handleOnSubmitChecko
     setShoppingCart([]);
     document.querySelector("#email-Input").value = "";
     document.querySelector("#name-Input").value = "";
+    document.querySelector("#subtotal").value = 0;
+    document.querySelector("#taxes").innerHTML = 0;
+    document.querySelector("#total").innerHTML = 0;
   };
 
   return (
@@ -74,22 +79,11 @@ const CheckoutForm = ({ isOpen, shoppingCart, checkoutForm, handleOnSubmitChecko
           A confirmation email will be sent to you so that you can confirm this order. Once you have confirmed the order, it will be delivered to your dorm
           room.
         </p>
+        {/* <Receipt nameInput={nameInput} emailInput={emailInput} shoppingCart={shoppingCart} subtotal={subtotal} /> */}
       </div>
     </div>
   );
 };
-//The first input should have:
-//  the type prop set to email
-//  the name prop set to email
-//  the placeholder prop set to student@codepath.org
-//  the value prop set by checkoutForm.email.
-//  a valid onChange prop that uses the handleOnCheckoutFormChange function to update the checkoutForm state
-//  The second input should have:
-//  the type prop set to text
-//  the name prop set to name
-//  the placeholder prop set to Student Name
-//  the value prop set by checkoutForm.name.
-//  a valid onChange prop that uses the handleOnCheckoutFormChange function to update the checkoutForm state
 
 export default CheckoutForm;
 
