@@ -32,7 +32,7 @@ const CheckoutForm = ({ isOpen, shoppingCart, setShoppingCart, subtotal }) => {
     setShoppingCart([]);
     document.querySelector("#email-Input").value = "";
     document.querySelector("#name-Input").value = "";
-    document.querySelector("#subtotal").value = 0;
+    document.querySelector("#subtotal").innerHTML = 0;
     document.querySelector("#taxes").innerHTML = 0;
     document.querySelector("#total").innerHTML = 0;
   };
