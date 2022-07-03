@@ -17,11 +17,11 @@ Part II
 
 https://user-images.githubusercontent.com/85651695/177023727-0d8a1bee-7404-48c3-a59a-5883aaa4d331.mp4
 
-Part II: Postman 
+Part II
 
 https://user-images.githubusercontent.com/85651695/177023731-62e3fdc4-0ce4-4dd1-85c7-b0ee5139d15e.mp4
 
-Part II: Adding products to cart and being stored into the db.json file.
+Part II
 
 ### Application Features
 
