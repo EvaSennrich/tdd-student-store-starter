@@ -9,12 +9,19 @@ https://user-images.githubusercontent.com/85651695/175903906-a783799c-8225-4247-
 
 Part I
 
+========================================================================================================
 
 https://user-images.githubusercontent.com/85651695/176978063-e6484060-26e6-47d2-8c59-1f900a7a9875.mp4
 
 Part II 
 
+https://user-images.githubusercontent.com/85651695/177023727-0d8a1bee-7404-48c3-a59a-5883aaa4d331.mp4
 
+Part II: Postman 
+
+https://user-images.githubusercontent.com/85651695/177023731-62e3fdc4-0ce4-4dd1-85c7-b0ee5139d15e.mp4
+
+Part II: Adding products to cart and being stored into the db.json file.
 
 ### Application Features
 
@@ -286,8 +293,8 @@ The following specifications were met on the Express backend and the React front
           - [X] `total` - the calculated total of the order
           - [X] `createdAt` - a string representation of the date and time when the order was placed
         - **optional**:
-          - [X] `receipt` - text describing the order (what might go on a receipt)
-      - [X] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
+          - [ ] `receipt` - text describing the order (what might go on a receipt)
+      - [ ] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
 
 ---
 
