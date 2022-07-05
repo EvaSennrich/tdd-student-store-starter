@@ -8,7 +8,8 @@ const ProductDetail = ({ product, handleItemTocart, handleRemoveItemToCart }) =>
   return (
     <div className="product-detail-cont">
       <div className="product-header">
-        <h2 className="product-name">{` Product ${product[useParams().productId - 1]} : ${product[useParams().productId - 1].name}`}</h2>
+        <h2 className="product-name">{product[useParams().productId - 1].name}</h2>
+        {/* <h2 className="product-name">{` Product ${product[useParams().productId - 1]} : ${product[useParams().productId - 1].name}`}</h2> */}
       </div>
       <div className="detail-image-cont">
         <img className="detail-image" src={product[useParams().productId - 1].image} alt={product[useParams().productId - 1].name + " image"} />
