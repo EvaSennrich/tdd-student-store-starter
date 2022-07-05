@@ -110,7 +110,7 @@ The following specifications were met on the Express backend and the React front
             - [X] Each object in the array should have two fields:
               - [X] The `itemId` field should store the `id` of the item being purchased.
               - [X] The `quantity` field should store a number representing how many of that item the user is purchasing.
-            - [ ] Don't include the `total` price here, since we'll be calculating that on the backend. Remember to never trust the client!
+            - [X] Don't include the `total` price here, since we'll be calculating that on the backend. Remember to never trust the client!
 
 **Navbar.jsx**
 
@@ -256,7 +256,7 @@ The following specifications were met on the Express backend and the React front
       - [ ] If the `POST` request is successful...
         - [ ] The `CheckoutForm` component should display a success message that contains the text `"Success!"` inside an element with the `className` of `success`.
         - [X] The `shoppingCart` should be emptied
-        - [ ] The `checkoutForm` should be reset to its default state.
+        - [X] The `checkoutForm` should be reset to its default state.
 
 **Server** - Create an Express server
   - [X] Wire up the appropriate middleware and error handlers in the `app.js` file
